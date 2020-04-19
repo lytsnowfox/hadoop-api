@@ -1,0 +1,28 @@
+server:
+  port: 14442
+  servlet:
+    context-path: /hadoop
+
+spring:
+  servlet:
+    # 文件上传设置
+    multipart:
+      enabled: true
+      max-file-size: 1000MB
+      max-request-size: 10000MB
+
+hbase:
+  zookeeper:
+    quorum: 192.168.30.131
+    property:
+      clientPort: 2181
+    znode:
+      parent: /hbase
+
+hive:
+  url: jdbc:hive2://192.168.30.131:10000/
+  driver-class-name: org.apache.hive.jdbc.HiveDriver
+
+hdfs:
+  path: hdfs://192.168.30.131:9000
+  username: root
